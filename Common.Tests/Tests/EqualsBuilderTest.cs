@@ -316,6 +316,46 @@ namespace Common.Test
         }
 
         /// <summary>
+        /// Tests if the object with a dictionary is equal.
+        /// </summary>
+        [TestMethod]
+        public void DictionaryEqualsWithDeferencingTest()
+        {
+            // setup
+            string nameA = "Timmy";
+            var itemsA = new Dictionary<string, object>
+            {
+                { "a", "apple" },
+                { "b", 32 }
+            };
+
+            string nameB = "Timmy";
+            var itemsB = new Dictionary<string, object>
+            {
+                { "a", "apple" },
+                { "b", 32 }
+            };
+
+            var dictionaryContainerA = new ObjectDictionaryContainer
+            {
+                Name = nameA,
+                Items = itemsA
+            };
+
+            var dictionaryContainerB = new ObjectDictionaryContainer
+            {
+                Name = nameB,
+                Items = itemsB
+            };
+
+            // test
+            var equal = dictionaryContainerA.Equals(dictionaryContainerB);
+
+            // assert
+            Assert.IsTrue(equal);
+        }
+
+        /// <summary>
         /// Tests if the object with a dictionary is not equal.
         /// </summary>
         [TestMethod]

@@ -102,7 +102,7 @@ namespace Common
                 {
                     foreach (var key in leftIDictionary.Keys)
                     {
-                        if (!(rightIDictionary.Contains(key) && leftIDictionary[key] == rightIDictionary[key]))
+                        if (!(rightIDictionary.Contains(key) && leftIDictionary[key].Equals(rightIDictionary[key])))
                         {
                             areEqual = false;
                             return this;
