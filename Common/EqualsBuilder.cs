@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace Common
@@ -67,23 +70,53 @@ namespace Common
 
             if (leftValue == null && rightValue == null)
             {
-                areEqual &= true;
+                areEqual = true;
                 return this;
             }
 
             if (leftValue != null && rightValue == null)
             {
-                areEqual &= false;
+                areEqual = false;
                 return this;
             }
 
             if (leftValue == null && rightValue != null)
             {
-                areEqual &= false;
+                areEqual = false;
                 return this;
             }
 
-            areEqual &= leftValue.Equals(rightValue);
+            var leftIEnumerable = leftValue as IEnumerable<object>;
+            var rightIEnumerable = rightValue as IEnumerable<object>;
+            if (null != leftIEnumerable && null != rightIEnumerable)
+            {
+                areEqual &= leftIEnumerable.SequenceEqual(rightIEnumerable);
+                return this;
+            }
+
+            var leftIDictionary = leftValue as IDictionary;
+            var rightIDictionary = rightValue as IDictionary;
+            if (null != leftIDictionary && null != rightIDictionary)
+            {
+                if (leftIDictionary.Count == rightIDictionary.Count)
+                {
+                    foreach (var key in leftIDictionary.Keys)
+                    {
+                        if (!(rightIDictionary.Contains(key) && leftIDictionary[key] == rightIDictionary[key]))
+                        {
+                            areEqual = false;
+                            return this;
+                        }
+                    }
+                }
+                else
+                {
+                    areEqual = false;
+                }
+                return this;
+            }
+
+            areEqual = leftValue.Equals(rightValue);
             return this;
         }
 
