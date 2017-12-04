@@ -7,8 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5B6CE0CA-50E4-4DFC-90DD-DD1195A260CA}"
 	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+		build.ps1 = build.ps1
 		license.txt = license.txt
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Tests", "Common.Tests\Common.Tests.csproj", "{DF639CEC-D39D-42C3-9623-8EF389BDE169}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +24,10 @@ Global
 		{2AB559F5-E2F5-4FB4-BE40-AF795CA11469}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AB559F5-E2F5-4FB4-BE40-AF795CA11469}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AB559F5-E2F5-4FB4-BE40-AF795CA11469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF639CEC-D39D-42C3-9623-8EF389BDE169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF639CEC-D39D-42C3-9623-8EF389BDE169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF639CEC-D39D-42C3-9623-8EF389BDE169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF639CEC-D39D-42C3-9623-8EF389BDE169}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
