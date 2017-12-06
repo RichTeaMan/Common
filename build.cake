@@ -34,22 +34,11 @@ Task("Build")
     .IsDependentOn("Restore-NuGet-Packages")
     .Does(() =>
 {
-    if(IsRunningOnWindows())
-    {
-
-        DirectoryPath vsLatest  = VSWhereLatest();
-        FilePath msBuildPathX64 = (vsLatest==null)
-                                ? null
-                                : vsLatest.CombineWithFilePath("./MSBuild/15.0/Bin/MSBuild.exe");
-
-        Information($"MS Build Path: {msBuildPathX64}");
-        MSBuild("Common.sln", new MSBuildSettings {
-        Verbosity = Verbosity.Minimal,
-        Configuration = configuration,
-        PlatformTarget = PlatformTarget.MSIL,
-        ToolPath = msBuildPathX64
-        });
-    }
+	MSBuild("Common.sln", new MSBuildSettings {
+	Verbosity = Verbosity.Minimal,
+	Configuration = configuration,
+	PlatformTarget = PlatformTarget.MSIL,
+	});
 });
 
 Task("Test")
