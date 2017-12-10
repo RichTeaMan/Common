@@ -1,5 +1,5 @@
 #tool nuget:?package=NUnit.ConsoleRunner&version=3.4.0
-#tool "nuget:?package=vswhere"
+#tool nuget:?package=vswhere
 //////////////////////////////////////////////////////////////////////
 // ARGUMENTS
 //////////////////////////////////////////////////////////////////////
@@ -34,11 +34,10 @@ Task("Build")
     .IsDependentOn("Restore-NuGet-Packages")
     .Does(() =>
 {
-	MSBuild("Common.sln", new MSBuildSettings {
-	Verbosity = Verbosity.Minimal,
-	Configuration = configuration,
-	PlatformTarget = PlatformTarget.MSIL,
-	});
+    DotNetCoreBuild("./Common.sln", new DotNetCoreBuildSettings {
+    Verbosity = DotNetCoreVerbosity.Minimal,
+    Configuration = configuration
+    });
 });
 
 Task("Test")
