@@ -1,5 +1,6 @@
 #tool nuget:?package=NUnit.ConsoleRunner&version=3.4.0
 #tool nuget:?package=vswhere
+#addin "Cake.Incubator"
 //////////////////////////////////////////////////////////////////////
 // ARGUMENTS
 //////////////////////////////////////////////////////////////////////
@@ -27,7 +28,7 @@ Task("Clean")
 Task("Restore-NuGet-Packages")
     .Does(() =>
 {
-    NuGetRestore("./Common.sln");
+    DotNetCoreRestore("./Common.sln");
 });
 
 Task("Build")
