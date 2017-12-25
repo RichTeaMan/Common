@@ -1,4 +1,4 @@
-﻿namespace Common.Test.Objects
+﻿namespace Common.Tests.Objects
 {
     public class Person
     {

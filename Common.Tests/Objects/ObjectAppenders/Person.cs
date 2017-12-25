@@ -1,4 +1,4 @@
-﻿namespace Common.Test.Objects.ObjectAppenders
+﻿namespace Common.Tests.Objects.ObjectAppenders
 {
     public class Person
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Common.Test.Objects
+namespace Common.Tests.Objects
 {
     public class ListContainer
     {

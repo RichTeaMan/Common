@@ -44,6 +44,18 @@ namespace Common
                 areEqual = false;
                 return;
             }
+
+        }
+
+        /// <summary>
+        /// Appends if base object is equal. This should be called with the result of base.Equals.
+        /// </summary>
+        /// <param name="baseEqual">If base object is equal.</param>
+        /// <returns>Equals builder.</returns>
+        public EqualsBuilder<T> AppendBase(bool baseEqual)
+        {
+            areEqual = areEqual && baseEqual;
+            return this;
         }
 
         public EqualsBuilder<T> Append(object leftValue, object rightValue)

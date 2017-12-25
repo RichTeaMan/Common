@@ -1,8 +1,8 @@
-using Common.Test.Objects;
+using Common.Tests.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-namespace Common.Test
+namespace Common.Tests
 {
     [TestClass]
     public class EqualsBuilderTest
@@ -475,5 +475,74 @@ namespace Common.Test
             // assert
             Assert.IsFalse(equal);
         }
+
+        /// <summary>
+        /// Tests if the object with inheritance is equal.
+        /// </summary>
+        [TestMethod]
+        public void BasicInheritanceEqualsTest()
+        {
+            // setup
+            string firstName = "Timmy";
+            string lastName = "Biggles";
+            string jobTitle = "Pig Licker";
+
+            var employeeA = new Employee
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                JobTitle = jobTitle
+            };
+
+            var employeeB = new Employee
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                JobTitle = jobTitle
+            };
+
+            // test
+            var equal = employeeA.Equals(employeeB);
+
+            // assert
+            Assert.IsTrue(equal);
+        }
+
+        /// <summary>
+        /// Tests if the object with inheritance is not equal.
+        /// </summary>
+        [TestMethod]
+        public void BasicInheritanceNotEqualsTest()
+        {
+            // setup
+            string firstNameA = "Timmy";
+            string lastNameA = "Biggles";
+            string jobTitleA = "Pig Licker";
+
+            string firstNameB = "Tommy";
+            string lastNameB = "Biggles";
+            string jobTitleB = "Pig Licker";
+
+            var employeeA = new Employee
+            {
+                FirstName = firstNameA,
+                LastName = lastNameA,
+                JobTitle = jobTitleA
+            };
+
+            var employeeB = new Employee
+            {
+                FirstName = firstNameB,
+                LastName = lastNameB,
+                JobTitle = jobTitleB
+            };
+
+            // test
+            var equal = employeeA.Equals(employeeB);
+
+            // assert
+            Assert.IsFalse(equal);
+        }
+
     }
 }

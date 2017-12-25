@@ -1,4 +1,4 @@
-using Common.Test.Objects;
+using Common.Tests.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
