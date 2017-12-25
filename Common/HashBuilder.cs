@@ -19,7 +19,8 @@ namespace Common
 
         public HashCodeBuilder<T> Append(object property)
         {
-            throw new NotImplementedException();
+            hashCode += 31 * hashCode + ((property == null) ? 0 : property.GetHashCode());
+            return this;
         }
 
         public HashCodeBuilder<T> Append<TProperty>(Expression<Func<T, TProperty>> propertyOrField)
@@ -32,7 +33,7 @@ namespace Common
 
             var func = propertyOrField.Compile();
             var value = func(target);
-            hashCode += 31 * hashCode + ((value == null) ? 0 : value.GetHashCode());
+            Append(value);
             return this;
         }
 

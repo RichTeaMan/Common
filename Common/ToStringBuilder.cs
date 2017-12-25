@@ -23,7 +23,9 @@ namespace Common
 
         public ToStringBuilder<T> Append(object property)
         {
-            throw new NotImplementedException();
+            string value = (property == null) ? "null" : property.ToString();
+            values.Add(value);
+            return this;
         }
 
         public ToStringBuilder<T> Append<TProperty>(Expression<Func<T, TProperty>> propertyOrField)
