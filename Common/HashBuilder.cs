@@ -17,6 +17,11 @@ namespace Common
             this.target = target;
         }
 
+        public HashCodeBuilder<T> Append(object property)
+        {
+            throw new NotImplementedException();
+        }
+
         public HashCodeBuilder<T> Append<TProperty>(Expression<Func<T, TProperty>> propertyOrField)
         {
             var expression = propertyOrField.Body as MemberExpression;

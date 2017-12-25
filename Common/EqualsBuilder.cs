@@ -46,27 +46,12 @@ namespace Common
             }
         }
 
-        public EqualsBuilder<T> Append<TProperty>(Expression<Func<T, TProperty>> propertyOrField)
+        public EqualsBuilder<T> Append(object leftValue, object rightValue)
         {
             if (!areEqual)
             {
                 return this;
             }
-
-            if (left == null || right == null)
-            {
-                return this;
-            }
-
-            var expression = propertyOrField.Body as MemberExpression;
-            if (expression == null)
-            {
-                throw new ArgumentException("Expecting Property or Field Expression of an object");
-            }
-
-            Func<T, TProperty> func = propertyOrField.Compile();
-            TProperty leftValue = func(left);
-            TProperty rightValue = func((T)right);
 
             if (leftValue == null && rightValue == null)
             {
@@ -102,7 +87,15 @@ namespace Common
                 {
                     foreach (var key in leftIDictionary.Keys)
                     {
-                        if (!(rightIDictionary.Contains(key) && leftIDictionary[key].Equals(rightIDictionary[key])))
+                        if (rightIDictionary.Contains(key))
+                        {
+                            Append(leftIDictionary[key], rightIDictionary[key]);
+                            if (!areEqual)
+                            {
+                                return this;
+                            }
+                        }
+                        else
                         {
                             areEqual = false;
                             return this;
@@ -116,7 +109,58 @@ namespace Common
                 return this;
             }
 
+            var leftICollection = leftValue as ICollection;
+            var rightICollection = rightValue as ICollection;
+            if (null != leftICollection && null != rightICollection)
+            {
+                if (leftICollection.Count == rightICollection.Count)
+                {
+                    var leftEnumerator = leftICollection.GetEnumerator();
+                    var rightEnumerator = rightICollection.GetEnumerator();
+
+                    while (leftEnumerator.MoveNext() && rightEnumerator.MoveNext())
+                    {
+                        Append(leftEnumerator.Current, rightEnumerator.Current);
+                        if (!areEqual)
+                        {
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    areEqual = false;
+                }
+                return this;
+            }
+
             areEqual = leftValue.Equals(rightValue);
+            return this;
+        }
+
+        public EqualsBuilder<T> Append<TProperty>(Expression<Func<T, TProperty>> propertyOrField)
+        {
+            if (!areEqual)
+            {
+                return this;
+            }
+
+            if (left == null || right == null)
+            {
+                return this;
+            }
+
+            var expression = propertyOrField.Body as MemberExpression;
+            if (expression == null)
+            {
+                throw new ArgumentException("Expecting Property or Field Expression of an object");
+            }
+
+            Func<T, TProperty> func = propertyOrField.Compile();
+            TProperty leftValue = func(left);
+            TProperty rightValue = func((T)right);
+
+            Append(leftValue, rightValue);
             return this;
         }
 

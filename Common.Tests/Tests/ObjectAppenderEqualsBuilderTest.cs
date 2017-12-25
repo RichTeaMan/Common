@@ -1,18 +1,18 @@
-using Common.Test.Objects;
+using Common.Test.Objects.ObjectAppenders;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
 namespace Common.Test
 {
     [TestClass]
-    public class EqualsBuilderTest
+    public class ObjectAppenderEqualsBuilderTest
     {
 
         /// <summary>
         /// Tests if equals can handle nulls.
         /// </summary>
         [TestMethod]
-        public void NullEqualsTest()
+        public void ObjectAppenderNullEqualsTest()
         {
             // setup
             string firstName = "Timmy";
@@ -35,7 +35,7 @@ namespace Common.Test
         /// Tests if the object reference is equal.
         /// </summary>
         [TestMethod]
-        public void ReferenceEqualsTest()
+        public void ObjectAppenderReferenceEqualsTest()
         {
             // setup
             string firstName = "Timmy";
@@ -58,7 +58,7 @@ namespace Common.Test
         /// Tests if the object is equal.
         /// </summary>
         [TestMethod]
-        public void BasicEqualsTest()
+        public void ObjectAppenderBasicEqualsTest()
         {
             // setup
             string firstName = "Timmy";
@@ -87,7 +87,7 @@ namespace Common.Test
         /// Tests if the object is not equal.
         /// </summary>
         [TestMethod]
-        public void BasicNotEqualsTest()
+        public void ObjectAppenderBasicNotEqualsTest()
         {
             // setup
             string firstNameA = "Timmy";
@@ -119,7 +119,7 @@ namespace Common.Test
         /// Tests if the object with a list is equal.
         /// </summary>
         [TestMethod]
-        public void ListEqualsTest()
+        public void ObjectAppenderListEqualsTest()
         {
             // setup
             string nameA = "Timmy";
@@ -159,7 +159,7 @@ namespace Common.Test
         /// Tests if the object with a list is not equal.
         /// </summary>
         [TestMethod]
-        public void ListNotEqualsTest()
+        public void ObjectAppenderListNotEqualsTest()
         {
             // setup
             string nameA = "Timmy";
@@ -199,7 +199,7 @@ namespace Common.Test
         /// Tests if the object with a set is equal.
         /// </summary>
         [TestMethod]
-        public void SetEqualsTest()
+        public void ObjectAppenderSetEqualsTest()
         {
             // setup
             string nameA = "Timmy";
@@ -239,7 +239,7 @@ namespace Common.Test
         /// Tests if the object with a set is not equal.
         /// </summary>
         [TestMethod]
-        public void SetNotEqualsTest()
+        public void ObjectAppenderSetNotEqualsTest()
         {
             // setup
             string nameA = "Timmy";
@@ -279,7 +279,7 @@ namespace Common.Test
         /// Tests if the object with a dictionary is equal.
         /// </summary>
         [TestMethod]
-        public void DictionaryEqualsTest()
+        public void ObjectAppenderDictionaryEqualsTest()
         {
             // setup
             string nameA = "Timmy";
@@ -320,7 +320,7 @@ namespace Common.Test
         /// dictionary is only typed to an object.
         /// </summary>
         [TestMethod]
-        public void DictionaryEqualsWithDeferencingTest()
+        public void ObjectAppenderDictionaryEqualsWithDeferencingTest()
         {
             // setup
             string nameA = "Timmy";
@@ -360,7 +360,7 @@ namespace Common.Test
         /// Tests if the object with a dictionary is not equal.
         /// </summary>
         [TestMethod]
-        public void DictionaryNotEqualsTest()
+        public void ObjectAppenderDictionaryNotEqualsTest()
         {
             // setup
             string nameA = "Timmy";
@@ -400,7 +400,7 @@ namespace Common.Test
         /// Tests if the object with a dictionary is equal. The value is an array.
         /// </summary>
         [TestMethod]
-        public void DictionaryEqualsWithArraysTest()
+        public void ObjectAppenderDictionaryEqualsWithArraysTest()
         {
             // setup
             string nameA = "Timmy";
@@ -440,7 +440,7 @@ namespace Common.Test
         /// Tests if the object with a dictionary is not equal. The value is an array.
         /// </summary>
         [TestMethod]
-        public void DictionaryNotEqualsWithArraysTest()
+        public void ObjectAppenderDictionaryNotEqualsWithArraysTest()
         {
             // setup
             string nameA = "Timmy";

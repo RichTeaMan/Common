@@ -21,6 +21,11 @@ namespace Common
             typeName = target.GetType().Name;
         }
 
+        public ToStringBuilder<T> Append(object property)
+        {
+            throw new NotImplementedException();
+        }
+
         public ToStringBuilder<T> Append<TProperty>(Expression<Func<T, TProperty>> propertyOrField)
         {
             var expression = propertyOrField.Body as MemberExpression;
