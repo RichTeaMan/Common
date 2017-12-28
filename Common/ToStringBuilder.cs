@@ -22,10 +22,34 @@ namespace Common
             typeName = target.GetType().Name;
         }
 
-        public ToStringBuilder<T> Append(object property)
+        private string FindString(object property, string propertyName)
         {
-            string value = (property == null) ? "null" : property.ToString();
-            values.Add(value);
+            string value;
+
+            if (property is ICollection returnCollection)
+            {
+                List<string> collectionValues = new List<string>();
+                var collectionEnumerator = returnCollection.GetEnumerator();
+
+                while (collectionEnumerator.MoveNext())
+                {
+                    collectionValues.Add(FindString(collectionEnumerator.Current, null));
+                }
+
+                value = string.Format("[ {0} ]", string.Join(", ", collectionValues));
+            }
+            else
+            {
+
+                value = (property == null) ? "null" : property.ToString();
+            }
+            return value;
+        }
+
+        public ToStringBuilder<T> Append(object property, string propertyName = null)
+        {
+            string value = FindString(property, propertyName);
+            values.Add(propertyName + DELIMITER + value);
             return this;
         }
 
@@ -39,26 +63,8 @@ namespace Common
             var name = expression.Member.Name;
             var func = propertyOrField.Compile();
             var returnValue = func(target);
-            string value;
 
-            if (returnValue is ICollection returnCollection)
-            {
-                List<string> collectionValues = new List<string>();
-                var collectionEnumerator = returnCollection.GetEnumerator();
-
-                while (collectionEnumerator.MoveNext())
-                {
-                    collectionValues.Add(collectionEnumerator.Current.ToString());
-                }
-
-                value = string.Format("[ {0} ]", string.Join(", ", collectionValues));
-            }
-            else
-            {
-
-                value = (returnValue == null) ? "null" : returnValue.ToString();
-            }
-            values.Add(name + DELIMITER + value);
+            Append(returnValue, name);
             return this;
         }
 
