@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
@@ -38,7 +39,25 @@ namespace Common
             var name = expression.Member.Name;
             var func = propertyOrField.Compile();
             var returnValue = func(target);
-            string value = (returnValue == null) ? "null" : returnValue.ToString();
+            string value;
+
+            if (returnValue is ICollection returnCollection)
+            {
+                List<string> collectionValues = new List<string>();
+                var collectionEnumerator = returnCollection.GetEnumerator();
+
+                while (collectionEnumerator.MoveNext())
+                {
+                    collectionValues.Add(collectionEnumerator.Current.ToString());
+                }
+
+                value = string.Format("[ {0} ]", string.Join(", ", collectionValues));
+            }
+            else
+            {
+
+                value = (returnValue == null) ? "null" : returnValue.ToString();
+            }
             values.Add(name + DELIMITER + value);
             return this;
         }
