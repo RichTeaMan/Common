@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace Common
@@ -19,6 +21,36 @@ namespace Common
 
         public HashCodeBuilder<T> Append(object property)
         {
+            if (property is IEnumerable<object> enumerable)
+            {
+                foreach (var value in enumerable)
+                {
+                    Append(value);
+                }
+                return this;
+            }
+
+            if (property is IDictionary dictionary)
+            {
+                foreach (var key in dictionary.Keys)
+                {
+                    Append(key);
+                    Append(dictionary[key]);
+                }
+                return this;
+            }
+
+            if (property is ICollection collection)
+            {
+                var leftEnumerator = collection.GetEnumerator();
+
+                while (leftEnumerator.MoveNext())
+                {
+                    Append(leftEnumerator.Current);
+                }
+                return this;
+            }
+
             hashCode += 31 * hashCode + ((property == null) ? 0 : property.GetHashCode());
             return this;
         }
