@@ -1,4 +1,6 @@
 # RichTea.Common
+[![NuGet](https://img.shields.io/nuget/v/RichTea.Common.svg?style=flat)](https://www.nuget.org/packages/RichTea.Common/)
+
 This project is a repository of useful classes.
 
 ## Classes
