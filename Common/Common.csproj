@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
-    <Version>0.5-beta</Version>
+    <Version>0.6-beta</Version>
     <PackageId>RichTea.Common</PackageId>
     <Authors>Thomas Holmes</Authors>
     <Title>RichTea.Common</Title>
