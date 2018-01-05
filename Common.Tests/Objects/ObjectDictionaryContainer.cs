@@ -27,8 +27,8 @@ namespace Common.Test.Objects
         public override int GetHashCode()
         {
             return new HashCodeBuilder<ObjectDictionaryContainer>(this)
-                .Append(x => x.Name)
-                .Append(x => x.Items)
+                .Append(Name)
+                .Append(Items)
                 .HashCode;
         }
     }

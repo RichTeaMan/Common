@@ -55,20 +55,6 @@ namespace Common
             return this;
         }
 
-        public HashCodeBuilder<T> Append<TProperty>(Expression<Func<T, TProperty>> propertyOrField)
-        {
-            var expression = propertyOrField.Body as MemberExpression;
-            if (expression == null)
-            {
-                throw new ArgumentException("Expecting Property or Field Expression of an object");
-            }
-
-            var func = propertyOrField.Compile();
-            var value = func(target);
-            Append(value);
-            return this;
-        }
-
         public int HashCode
         {
             get
