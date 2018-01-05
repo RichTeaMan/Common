@@ -7,6 +7,7 @@ This project is a repository of useful classes.
 * EqualsBuilder
 * HashBuilder
 * ToStringBuilder
+* RandomExtension
 
 ## Cake Tasks
 This project uses [Cake](https://cakebuild.net)!
