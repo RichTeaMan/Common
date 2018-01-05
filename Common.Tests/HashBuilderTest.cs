@@ -1,64 +1,18 @@
-using Common.Tests.Objects;
+using RichTea.Common.Tests.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-namespace Common.Tests
+namespace RichTea.Common.Tests
 {
     [TestClass]
-    public class EqualsBuilderTest
+    public class HashBuilderTest
     {
-
-        /// <summary>
-        /// Tests if equals can handle nulls.
-        /// </summary>
-        [TestMethod]
-        public void NullEqualsTest()
-        {
-            // setup
-            string firstName = "Timmy";
-            string lastName = "Biggles";
-
-            var person = new Person
-            {
-                FirstName = firstName,
-                LastName = lastName
-            };
-
-            // test
-            var equal = person.Equals(null);
-
-            // assert
-            Assert.IsFalse(equal);
-        }
-
-        /// <summary>
-        /// Tests if the object reference is equal.
-        /// </summary>
-        [TestMethod]
-        public void ReferenceEqualsTest()
-        {
-            // setup
-            string firstName = "Timmy";
-            string lastName = "Biggles";
-
-            var person = new Person
-            {
-                FirstName = firstName,
-                LastName = lastName
-            };
-
-            // test
-            var equal = person.Equals(person);
-
-            // assert
-            Assert.IsTrue(equal);
-        }
 
         /// <summary>
         /// Tests if the object is equal.
         /// </summary>
         [TestMethod]
-        public void BasicEqualsTest()
+        public void BasicGetHashCodeTest()
         {
             // setup
             string firstName = "Timmy";
@@ -77,17 +31,18 @@ namespace Common.Tests
             };
 
             // test
-            var equal = personA.Equals(personB);
+            var personAHash = personA.GetHashCode();
+            var personBHash = personB.GetHashCode();
 
             // assert
-            Assert.IsTrue(equal);
+            Assert.AreEqual(personAHash, personBHash);
         }
 
         /// <summary>
         /// Tests if the object is not equal.
         /// </summary>
         [TestMethod]
-        public void BasicNotEqualsTest()
+        public void BasicNotGetHashCodeTest()
         {
             // setup
             string firstNameA = "Timmy";
@@ -109,17 +64,18 @@ namespace Common.Tests
             };
 
             // test
-            var equal = personA.Equals(personB);
+            var personAHash = personA.GetHashCode();
+            var personBHash = personB.GetHashCode();
 
             // assert
-            Assert.IsFalse(equal);
+            Assert.AreNotEqual(personAHash, personBHash);
         }
 
         /// <summary>
         /// Tests if the object with a list is equal.
         /// </summary>
         [TestMethod]
-        public void ListEqualsTest()
+        public void ListGetHashCodeTest()
         {
             // setup
             string nameA = "Timmy";
@@ -149,17 +105,18 @@ namespace Common.Tests
             };
 
             // test
-            var equal = listContainerA.Equals(listContainerB);
+            var listContainerAHash = listContainerA.GetHashCode();
+            var listContainerBHash = listContainerB.GetHashCode();
 
             // assert
-            Assert.IsTrue(equal);
+            Assert.AreEqual(listContainerAHash, listContainerBHash);
         }
 
         /// <summary>
         /// Tests if the object with a list is not equal.
         /// </summary>
         [TestMethod]
-        public void ListNotEqualsTest()
+        public void ListNotGetHashCodeTest()
         {
             // setup
             string nameA = "Timmy";
@@ -189,17 +146,18 @@ namespace Common.Tests
             };
 
             // test
-            var equal = listContainerA.Equals(listContainerB);
+            var listContainerAHash = listContainerA.GetHashCode();
+            var listContainerBHash = listContainerB.GetHashCode();
 
             // assert
-            Assert.IsFalse(equal);
+            Assert.AreNotEqual(listContainerAHash, listContainerBHash);
         }
 
         /// <summary>
         /// Tests if the object with a set is equal.
         /// </summary>
         [TestMethod]
-        public void SetEqualsTest()
+        public void SetGetHashCodeTest()
         {
             // setup
             string nameA = "Timmy";
@@ -229,17 +187,18 @@ namespace Common.Tests
             };
 
             // test
-            var equal = setContainerA.Equals(setContainerB);
+            var setContainerAHash = setContainerA.GetHashCode();
+            var setContainerBHash = setContainerB.GetHashCode();
 
             // assert
-            Assert.IsTrue(equal);
+            Assert.AreEqual(setContainerAHash, setContainerBHash);
         }
 
         /// <summary>
         /// Tests if the object with a set is not equal.
         /// </summary>
         [TestMethod]
-        public void SetNotEqualsTest()
+        public void SetNotGetHashCodeTest()
         {
             // setup
             string nameA = "Timmy";
@@ -269,17 +228,18 @@ namespace Common.Tests
             };
 
             // test
-            var equal = setContainerA.Equals(setContainerB);
+            var setContainerAHash = setContainerA.GetHashCode();
+            var setContainerBHash = setContainerB.GetHashCode();
 
             // assert
-            Assert.IsFalse(equal);
+            Assert.AreNotEqual(setContainerAHash, setContainerBHash);
         }
 
         /// <summary>
         /// Tests if the object with a dictionary is equal.
         /// </summary>
         [TestMethod]
-        public void DictionaryEqualsTest()
+        public void DictionaryGetHashCodeTest()
         {
             // setup
             string nameA = "Timmy";
@@ -309,10 +269,11 @@ namespace Common.Tests
             };
 
             // test
-            var equal = dictionaryContainerA.Equals(dictionaryContainerB);
+            var dictionaryContainerAHash = dictionaryContainerA.GetHashCode();
+            var dictionaryContainerBHash = dictionaryContainerB.GetHashCode();
 
             // assert
-            Assert.IsTrue(equal);
+            Assert.AreEqual(dictionaryContainerAHash, dictionaryContainerBHash);
         }
 
         /// <summary>
@@ -320,7 +281,7 @@ namespace Common.Tests
         /// dictionary is only typed to an object.
         /// </summary>
         [TestMethod]
-        public void DictionaryEqualsWithDeferencingTest()
+        public void DictionaryGetHashCodeWithDeferencingTest()
         {
             // setup
             string nameA = "Timmy";
@@ -350,17 +311,18 @@ namespace Common.Tests
             };
 
             // test
-            var equal = dictionaryContainerA.Equals(dictionaryContainerB);
+            var dictionaryContainerAHash = dictionaryContainerA.GetHashCode();
+            var dictionaryContainerBHash = dictionaryContainerB.GetHashCode();
 
             // assert
-            Assert.IsTrue(equal);
+            Assert.AreEqual(dictionaryContainerAHash, dictionaryContainerBHash);
         }
 
         /// <summary>
         /// Tests if the object with a dictionary is not equal.
         /// </summary>
         [TestMethod]
-        public void DictionaryNotEqualsTest()
+        public void DictionaryNotGetHashCodeTest()
         {
             // setup
             string nameA = "Timmy";
@@ -390,17 +352,18 @@ namespace Common.Tests
             };
 
             // test
-            var equal = dictionaryContainerA.Equals(dictionaryContainerB);
+            var dictionaryContainerAHash = dictionaryContainerA.GetHashCode();
+            var dictionaryContainerBHash = dictionaryContainerB.GetHashCode();
 
             // assert
-            Assert.IsFalse(equal);
+            Assert.AreNotEqual(dictionaryContainerAHash, dictionaryContainerBHash);
         }
 
         /// <summary>
         /// Tests if the object with a dictionary is equal. The value is an array.
         /// </summary>
         [TestMethod]
-        public void DictionaryEqualsWithArraysTest()
+        public void DictionaryGetHashCodeWithArraysTest()
         {
             // setup
             string nameA = "Timmy";
@@ -430,17 +393,18 @@ namespace Common.Tests
             };
 
             // test
-            var equal = dictionaryContainerA.Equals(dictionaryContainerB);
+            var dictionaryContainerAHash = dictionaryContainerA.GetHashCode();
+            var dictionaryContainerBHash = dictionaryContainerB.GetHashCode();
 
             // assert
-            Assert.IsTrue(equal);
+            Assert.AreEqual(dictionaryContainerAHash, dictionaryContainerBHash);
         }
 
         /// <summary>
         /// Tests if the object with a dictionary is not equal. The value is an array.
         /// </summary>
         [TestMethod]
-        public void DictionaryNotEqualsWithArraysTest()
+        public void DictionaryNotGetHashCodeWithArraysTest()
         {
             // setup
             string nameA = "Timmy";
@@ -470,79 +434,11 @@ namespace Common.Tests
             };
 
             // test
-            var equal = dictionaryContainerA.Equals(dictionaryContainerB);
+            var dictionaryContainerAHash = dictionaryContainerA.GetHashCode();
+            var dictionaryContainerBHash = dictionaryContainerB.GetHashCode();
 
             // assert
-            Assert.IsFalse(equal);
+            Assert.AreNotEqual(dictionaryContainerAHash, dictionaryContainerBHash);
         }
-
-        /// <summary>
-        /// Tests if the object with inheritance is equal.
-        /// </summary>
-        [TestMethod]
-        public void BasicInheritanceEqualsTest()
-        {
-            // setup
-            string firstName = "Timmy";
-            string lastName = "Biggles";
-            string jobTitle = "Pig Licker";
-
-            var employeeA = new Employee
-            {
-                FirstName = firstName,
-                LastName = lastName,
-                JobTitle = jobTitle
-            };
-
-            var employeeB = new Employee
-            {
-                FirstName = firstName,
-                LastName = lastName,
-                JobTitle = jobTitle
-            };
-
-            // test
-            var equal = employeeA.Equals(employeeB);
-
-            // assert
-            Assert.IsTrue(equal);
-        }
-
-        /// <summary>
-        /// Tests if the object with inheritance is not equal.
-        /// </summary>
-        [TestMethod]
-        public void BasicInheritanceNotEqualsTest()
-        {
-            // setup
-            string firstNameA = "Timmy";
-            string lastNameA = "Biggles";
-            string jobTitleA = "Pig Licker";
-
-            string firstNameB = "Tommy";
-            string lastNameB = "Biggles";
-            string jobTitleB = "Pig Licker";
-
-            var employeeA = new Employee
-            {
-                FirstName = firstNameA,
-                LastName = lastNameA,
-                JobTitle = jobTitleA
-            };
-
-            var employeeB = new Employee
-            {
-                FirstName = firstNameB,
-                LastName = lastNameB,
-                JobTitle = jobTitleB
-            };
-
-            // test
-            var equal = employeeA.Equals(employeeB);
-
-            // assert
-            Assert.IsFalse(equal);
-        }
-
     }
 }

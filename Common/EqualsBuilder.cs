@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Common
+namespace RichTea.Common
 {
     /// <summary>
     /// A generic class for handling equals methods.
@@ -27,7 +27,7 @@ namespace Common
         /// <summary>
         /// Gets if the objects are equal. If false no further comparison should be required.
         /// </summary>
-        public bool AreEqual { get; protected set; }
+        public bool AreEqual { get; protected set; } = true;
 
         /// <summary>
         /// Equals builder constructor. Should be supplied with the two objects being compared.

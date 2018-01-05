@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Common
+namespace RichTea.Common
 {
     /// <summary>
     /// A generic class for handling get hash code methods.
@@ -19,7 +19,7 @@ namespace Common
         private readonly T target;
 
         /// <summary>
-        /// Prime hash to being with.
+        /// Starting hash.
         /// </summary>
         private int hashCode = 17;
 

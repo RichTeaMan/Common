@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Common
+namespace RichTea.Common
 {
     /// <summary>
     /// A generic class for building to strings.

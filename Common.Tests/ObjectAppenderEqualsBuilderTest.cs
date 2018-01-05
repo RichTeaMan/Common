@@ -1,8 +1,8 @@
-using Common.Tests.Objects.ObjectAppenders;
+using RichTea.Common.Tests.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-namespace Common.Test
+namespace RichTea.Common.Tests
 {
     [TestClass]
     public class ObjectAppenderEqualsBuilderTest

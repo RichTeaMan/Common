@@ -16,6 +16,8 @@
     <PackageLicenseUrl>https://github.com/RichTeaMan/Common/blob/master/license.txt</PackageLicenseUrl>
     <Copyright>2018 Thomas Holmes</Copyright>
     <PackageTags>utility equals hashcode tostring random</PackageTags>
+    <AssemblyName>RichTea.Common</AssemblyName>
+    <RootNamespace>RichTea.Common</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

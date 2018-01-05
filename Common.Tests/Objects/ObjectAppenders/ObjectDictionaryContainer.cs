@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Common.Tests.Objects.ObjectAppenders
+namespace RichTea.Common.Tests.Objects.ObjectAppenders
 {
     public class ObjectDictionaryContainer
     {

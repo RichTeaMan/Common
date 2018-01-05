@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RichTea.Common.Tests.Tests
+namespace RichTea.Common.Tests
 {
     [TestClass]
     public class RandomExtensionTest

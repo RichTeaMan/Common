@@ -1,4 +1,4 @@
-﻿namespace Common.Tests.Objects.ObjectAppenders
+﻿namespace RichTea.Common.Tests.Objects.ObjectAppenders
 {
     public class Employee : Person
     {
