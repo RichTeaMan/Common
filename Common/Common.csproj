@@ -18,4 +18,8 @@
     <PackageTags>utility equals hashcode tostring</PackageTags>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
 </Project>
