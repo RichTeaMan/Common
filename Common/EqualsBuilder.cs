@@ -7,15 +7,34 @@ using System.Linq.Expressions;
 namespace Common
 {
     /// <summary>
-    /// Inspired code from https://dhavaldalal.wordpress.com/2012/03/16/equals-hashcode-and-tostring-build/
+    /// A generic class for handling equals methods.
+    /// 
+    /// Code inspired from https://dhavaldalal.wordpress.com/2012/03/16/equals-hashcode-and-tostring-build/
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class EqualsBuilder<T>
     {
+        /// <summary>
+        /// Left object.
+        /// </summary>
         private readonly T left;
-        private readonly object right;
-        private bool areEqual = true;
 
+        /// <summary>
+        /// Right object.
+        /// </summary>
+        private readonly object right;
+
+        /// <summary>
+        /// Gets if the objects are equal. If false no further comparison should be required.
+        /// </summary>
+        public bool AreEqual { get; protected set; }
+
+        /// <summary>
+        /// Equals builder constructor. Should be supplied with the two objects being compared.
+        /// Field comparisons should be chained with the Append and AppendBase methods.
+        /// </summary>
+        /// <param name="left">Object being compared.</param>
+        /// <param name="right">Object being compared against.</param>
         public EqualsBuilder(T left, object right)
         {
             this.left = left;
@@ -23,25 +42,25 @@ namespace Common
 
             if (ReferenceEquals(left, right))
             {
-                areEqual = true;
+                AreEqual = true;
                 return;
             }
 
             if (ReferenceEquals(left, null))
             {
-                areEqual = false;
+                AreEqual = false;
                 return;
             }
 
             if (ReferenceEquals(right, null))
             {
-                areEqual = false;
+                AreEqual = false;
                 return;
             }
 
             if (left.GetType() != right.GetType())
             {
-                areEqual = false;
+                AreEqual = false;
                 return;
             }
 
@@ -54,32 +73,40 @@ namespace Common
         /// <returns>Equals builder.</returns>
         public EqualsBuilder<T> AppendBase(bool baseEqual)
         {
-            areEqual = areEqual && baseEqual;
+            AreEqual = AreEqual && baseEqual;
             return this;
         }
 
+        /// <summary>
+        /// Appends a field to the equals builder. Both parameters should refer to the same field.
+        /// 
+        /// This method can handle nulls and collections.
+        /// </summary>
+        /// <param name="leftValue">Left value.</param>
+        /// <param name="rightValue">Right value.</param>
+        /// <returns>Equals builder.</returns>
         public EqualsBuilder<T> Append(object leftValue, object rightValue)
         {
-            if (!areEqual)
+            if (!AreEqual)
             {
                 return this;
             }
 
             if (leftValue == null && rightValue == null)
             {
-                areEqual = true;
+                AreEqual = true;
                 return this;
             }
 
             if (leftValue != null && rightValue == null)
             {
-                areEqual = false;
+                AreEqual = false;
                 return this;
             }
 
             if (leftValue == null && rightValue != null)
             {
-                areEqual = false;
+                AreEqual = false;
                 return this;
             }
 
@@ -87,7 +114,7 @@ namespace Common
             var rightIEnumerable = rightValue as IEnumerable<object>;
             if (null != leftIEnumerable && null != rightIEnumerable)
             {
-                areEqual &= leftIEnumerable.SequenceEqual(rightIEnumerable);
+                AreEqual &= leftIEnumerable.SequenceEqual(rightIEnumerable);
                 return this;
             }
 
@@ -102,21 +129,21 @@ namespace Common
                         if (rightIDictionary.Contains(key))
                         {
                             Append(leftIDictionary[key], rightIDictionary[key]);
-                            if (!areEqual)
+                            if (!AreEqual)
                             {
                                 return this;
                             }
                         }
                         else
                         {
-                            areEqual = false;
+                            AreEqual = false;
                             return this;
                         }
                     }
                 }
                 else
                 {
-                    areEqual = false;
+                    AreEqual = false;
                 }
                 return this;
             }
@@ -133,7 +160,7 @@ namespace Common
                     while (leftEnumerator.MoveNext() && rightEnumerator.MoveNext())
                     {
                         Append(leftEnumerator.Current, rightEnumerator.Current);
-                        if (!areEqual)
+                        if (!AreEqual)
                         {
                             break;
                         }
@@ -141,18 +168,27 @@ namespace Common
                 }
                 else
                 {
-                    areEqual = false;
+                    AreEqual = false;
                 }
                 return this;
             }
 
-            areEqual = leftValue.Equals(rightValue);
+            AreEqual = leftValue.Equals(rightValue);
             return this;
         }
 
+        /// <summary>
+        /// Appends an expression to the equals builder. This expression is then used on both left and right values
+        /// to find a field value to be compared.
+        /// 
+        /// This method can handle expressions that return nulls and collections. Note that this method is considerably
+        /// slower than the Append(object, object) override. That method should be used if higher performance is required,
+        /// </summary>
+        /// <param name="propertyOrField">Expression that returns a proeprty or field.</param>
+        /// <returns>Equals builder.</returns>
         public EqualsBuilder<T> Append<TProperty>(Expression<Func<T, TProperty>> propertyOrField)
         {
-            if (!areEqual)
+            if (!AreEqual)
             {
                 return this;
             }
@@ -176,9 +212,5 @@ namespace Common
             return this;
         }
 
-        public bool Equals()
-        {
-            return areEqual;
-        }
     }
 }

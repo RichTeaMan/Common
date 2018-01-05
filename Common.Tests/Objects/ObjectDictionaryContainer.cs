@@ -21,7 +21,7 @@ namespace Common.Tests.Objects
             return new EqualsBuilder<ObjectDictionaryContainer>(this, that)
                 .Append(x => x.Name)
                 .Append(x => x.Items)
-                .Equals();
+                .AreEqual;
         }
 
         public override int GetHashCode()

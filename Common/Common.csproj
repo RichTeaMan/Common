@@ -14,8 +14,16 @@
     <PackageProjectUrl>https://github.com/RichTeaMan/Common</PackageProjectUrl>
     <RepositoryUrl>https://github.com/RichTeaMan/Common</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/RichTeaMan/Common/blob/master/license.txt</PackageLicenseUrl>
-    <Copyright>2017 Thomas Holmes</Copyright>
+    <Copyright>2018 Thomas Holmes</Copyright>
     <PackageTags>utility equals hashcode tostring random</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.4\Common.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.4\Common.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -19,7 +19,7 @@
             return new EqualsBuilder<Person>(this, that)
                 .Append(x => x.FirstName)
                 .Append(x => x.LastName)
-                .Equals();
+                .AreEqual;
         }
 
         public override int GetHashCode()

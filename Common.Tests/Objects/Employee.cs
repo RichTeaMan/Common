@@ -16,7 +16,7 @@
             return new EqualsBuilder<Employee>(this, that)
                 .AppendBase(base.Equals(that))
                 .Append(x => x.JobTitle)
-                .Equals();
+                .AreEqual;
         }
 
         public override int GetHashCode()

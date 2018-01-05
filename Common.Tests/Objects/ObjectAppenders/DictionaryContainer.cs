@@ -22,7 +22,7 @@ namespace Common.Tests.Objects.ObjectAppenders
             return new EqualsBuilder<DictionaryContainer>(this, that)
                 .Append(Name, other?.Name)
                 .Append(Items, other?.Items)
-                .Equals();
+                .AreEqual;
         }
 
         public override int GetHashCode()

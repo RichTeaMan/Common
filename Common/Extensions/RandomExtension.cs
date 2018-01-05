@@ -3,6 +3,9 @@ using System;
 
 namespace RichTea.Common.Extensions
 {
+    /// <summary>
+    /// Extension methods for the Random class.
+    /// </summary>
     public static class RandomExtension
     {
         /// <summary>
