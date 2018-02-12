@@ -8,10 +8,8 @@ namespace RichTea.Common
 {
     /// <summary>
     /// A generic class for handling equals methods.
-    /// 
-    /// Code inspired from https://dhavaldalal.wordpress.com/2012/03/16/equals-hashcode-and-tostring-build/
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">The type being compared.</typeparam>
     public class EqualsBuilder<T>
     {
         /// <summary>
@@ -46,13 +44,13 @@ namespace RichTea.Common
                 return;
             }
 
-            if (ReferenceEquals(left, null))
+            if (left == null)
             {
                 AreEqual = false;
                 return;
             }
 
-            if (ReferenceEquals(right, null))
+            if (right == null)
             {
                 AreEqual = false;
                 return;

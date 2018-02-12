@@ -7,10 +7,8 @@ namespace RichTea.Common
 {
     /// <summary>
     /// A generic class for building to strings.
-    /// 
-    /// Inspired code from https://dhavaldalal.wordpress.com/2012/03/16/equals-hashcode-and-tostring-build/
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">The type getting stringified.</typeparam>
     public class ToStringBuilder<T>
     {
         private readonly T target;

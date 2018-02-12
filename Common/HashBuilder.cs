@@ -7,10 +7,8 @@ namespace RichTea.Common
 {
     /// <summary>
     /// A generic class for handling get hash code methods.
-    /// 
-    /// Inspired code from https://dhavaldalal.wordpress.com/2012/03/16/equals-hashcode-and-tostring-build/
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">The type being hashed.</typeparam>
     public class HashCodeBuilder<T>
     {
         /// <summary>
