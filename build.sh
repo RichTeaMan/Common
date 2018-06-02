@@ -8,7 +8,7 @@
 # Define directories.
 SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 TOOLS_DIR=$SCRIPT_DIR/tools
-CAKE_VERSION=0.19.3
+CAKE_VERSION=0.26.1
 CAKE_DLL=$TOOLS_DIR/Cake.CoreCLR.$CAKE_VERSION/Cake.dll
 
 # Make sure the tools folder exist.
@@ -24,7 +24,7 @@ echo "Installing .NET CLI..."
 if [ ! -d "$SCRIPT_DIR/.dotnet" ]; then
   mkdir "$SCRIPT_DIR/.dotnet"
 fi
-curl -Lsfo "$SCRIPT_DIR/.dotnet/dotnet-install.sh" https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.sh
+curl -Lsfo "$SCRIPT_DIR/.dotnet/dotnet-install.sh" https://raw.githubusercontent.com/dotnet/cli/release/2.1.4xx/scripts/obtain/dotnet-install.sh
 sudo bash "$SCRIPT_DIR/.dotnet/dotnet-install.sh" --version 1.0.0-preview3-003223 --install-dir .dotnet --no-path
 export PATH="$SCRIPT_DIR/.dotnet":$PATH
 export DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1

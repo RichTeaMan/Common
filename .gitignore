@@ -4,6 +4,7 @@
 # Cake related
 tools/
 !tools/packages.config
+.dotnet/
 
 # User-specific files
 *.suo
