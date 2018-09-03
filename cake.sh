@@ -26,7 +26,7 @@ if [ ! -d "$SCRIPT_DIR/.dotnet" ]; then
 fi
 curl -Lsfo "$SCRIPT_DIR/.dotnet/dotnet-install.sh" https://raw.githubusercontent.com/dotnet/cli/release/2.1.4xx/scripts/obtain/dotnet-install.sh
 chmod +x "$SCRIPT_DIR/.dotnet/dotnet-install.sh"
-"$SCRIPT_DIR/.dotnet/dotnet-install.sh" --version 2.1.105 --install-dir .dotnet --no-path
+"$SCRIPT_DIR/.dotnet/dotnet-install.sh" --version 2.1.300 --install-dir .dotnet --no-path
 export PATH="$SCRIPT_DIR/.dotnet":$PATH
 export DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
