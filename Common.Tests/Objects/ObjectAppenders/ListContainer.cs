@@ -27,7 +27,7 @@ namespace RichTea.Common.Tests.Objects.ObjectAppenders
 
         public override int GetHashCode()
         {
-            return new HashCodeBuilder<ListContainer>(this)
+            return new HashCodeBuilder()
                 .Append(Name)
                 .Append(Items)
                 .HashCode;

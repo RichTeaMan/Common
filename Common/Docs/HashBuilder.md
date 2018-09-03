@@ -13,7 +13,7 @@ public class Person
 
     public override int GetHashCode()
     {
-        return new HashCodeBuilder<Person>(this)
+        return new HashCodeBuilder()
             .Append(FirstName)
             .Append(LastName)
             .HashCode;
@@ -32,7 +32,7 @@ public class Employee : Person
 
     public override int GetHashCode()
     {
-        return new HashCodeBuilder<Employee>(this)
+        return new HashCodeBuilder()
             .Append(base.GetHashCode())
             .Append(JobTitle)
             .HashCode;

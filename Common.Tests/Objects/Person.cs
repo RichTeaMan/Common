@@ -24,7 +24,7 @@
 
         public override int GetHashCode()
         {
-            return new HashCodeBuilder<Person>(this)
+            return new HashCodeBuilder()
                 .Append(FirstName)
                 .Append(LastName)
                 .HashCode;

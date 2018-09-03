@@ -26,7 +26,7 @@ namespace RichTea.Common.Tests.Objects
 
         public override int GetHashCode()
         {
-            return new HashCodeBuilder<DictionaryContainer>(this)
+            return new HashCodeBuilder()
                 .Append(Name)
                 .Append(Items)
                 .HashCode;

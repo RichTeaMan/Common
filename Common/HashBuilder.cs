@@ -5,14 +5,15 @@ using System.Collections.Generic;
 namespace RichTea.Common
 {
     /// <summary>
-    /// A generic class for handling get hash code methods.
+    /// A generic class for handling get hash code methods. Obsolete, use <see cref="HashCodeBuilder"/> instead.
     /// </summary>
     /// <typeparam name="T">The type being hashed.</typeparam>
+    [Obsolete]
     public class HashCodeBuilder<T> : HashCodeBuilder
     {
         /// <summary>
         /// Hash code builder constructor. Should be suppplied with the object being hashed then
-        /// fields to add ot the hash should be chained with the Append method.
+        /// fields to add to the hash should be chained with the Append method.
         /// </summary>
         public HashCodeBuilder(T target)
         {
@@ -72,7 +73,6 @@ namespace RichTea.Common
             HashCode = 31 * HashCode + ((property == null) ? 0 : property.GetHashCode());
             return this;
         }
-
 
     }
 }

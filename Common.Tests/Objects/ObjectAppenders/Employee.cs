@@ -21,7 +21,7 @@
 
         public override int GetHashCode()
         {
-            return new HashCodeBuilder<Employee>(this)
+            return new HashCodeBuilder()
                 .Append(JobTitle)
                 .HashCode;
         }
