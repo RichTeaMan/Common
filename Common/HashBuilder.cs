@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace RichTea.Common
 {
@@ -9,26 +8,27 @@ namespace RichTea.Common
     /// A generic class for handling get hash code methods.
     /// </summary>
     /// <typeparam name="T">The type being hashed.</typeparam>
-    public class HashCodeBuilder<T>
+    public class HashCodeBuilder<T> : HashCodeBuilder
     {
-        /// <summary>
-        /// Object being hashed.
-        /// </summary>
-        private readonly T target;
-
-        /// <summary>
-        /// Starting hash.
-        /// </summary>
-        private int hashCode = 17;
-
         /// <summary>
         /// Hash code builder constructor. Should be suppplied with the object being hashed then
         /// fields to add ot the hash should be chained with the Append method.
         /// </summary>
         public HashCodeBuilder(T target)
         {
-            this.target = target;
         }
+    }
+
+    /// <summary>
+    /// A generic class for handling get hash code methods.
+    /// </summary>
+    public class HashCodeBuilder
+    {
+
+        /// <summary>
+        /// Gets the hash code.
+        /// </summary>
+        public int HashCode { get; private set; } = 17;
 
         /// <summary>
         /// Appends a field to the hash code builder.
@@ -37,7 +37,7 @@ namespace RichTea.Common
         /// </summary>
         /// <param name="property">Property to hash.</param>
         /// <returns>Hash code builder.</returns>
-        public HashCodeBuilder<T> Append(object property)
+        public HashCodeBuilder Append(object property)
         {
             if (property is IEnumerable<object> enumerable)
             {
@@ -69,19 +69,10 @@ namespace RichTea.Common
                 return this;
             }
 
-            hashCode += 31 * hashCode + ((property == null) ? 0 : property.GetHashCode());
+            HashCode = 31 * HashCode + ((property == null) ? 0 : property.GetHashCode());
             return this;
         }
 
-        /// <summary>
-        /// Gets the hash code.
-        /// </summary>
-        public int HashCode
-        {
-            get
-            {
-                return hashCode;
-            }
-        }
+
     }
 }

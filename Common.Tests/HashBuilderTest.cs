@@ -1,6 +1,8 @@
-using RichTea.Common.Tests.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RichTea.Common.Tests.Objects;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RichTea.Common.Tests
 {
@@ -439,6 +441,33 @@ namespace RichTea.Common.Tests
 
             // assert
             Assert.AreNotEqual(dictionaryContainerAHash, dictionaryContainerBHash);
+        }
+
+        [TestMethod]
+        public void HashCollisionTest()
+        {
+            Random random = new Random(17);
+
+            int arraySize = 40;
+            int arrayCount = 10000;
+            var hashes = new List<int>();
+
+            foreach (var i in Enumerable.Range(0, arrayCount))
+            {
+                var array = Enumerable.Range(0, arraySize).Select(a => random.NextDouble()).ToArray();
+
+                var hash = new HashCodeBuilder().Append(array).HashCode;
+                hashes.Add(hash);
+
+                // modifiy just one element and rehash
+                array[array.Length - 1] = random.NextDouble();
+                var hash2 = new HashCodeBuilder().Append(array).HashCode;
+                hashes.Add(hash2);
+            }
+
+            int distinctHashCount = hashes.Distinct().Count();
+
+            Assert.AreEqual(arrayCount * 2, distinctHashCount);
         }
     }
 }
