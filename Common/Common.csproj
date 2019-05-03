@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <PackageId>RichTea.Common</PackageId>
     <Authors>Thomas Holmes</Authors>
     <Title>RichTea.Common</Title>
     <Company />
     <Product />
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/RichTeaMan/Common</PackageProjectUrl>
     <RepositoryUrl>https://github.com/RichTeaMan/Common</RepositoryUrl>

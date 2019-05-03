@@ -51,12 +51,12 @@ namespace RichTea.Common.Extensions
         /// <summary>
         /// Gets a random long integer.
         /// </summary>
-        /// <param name="rnd">Random.</param>
+        /// <param name="random">Random.</param>
         /// <returns>Random long.</returns>
-        public static long RandomLong(this Random rnd)
+        public static long RandomLong(this Random random)
         {
             byte[] buffer = new byte[8];
-            rnd.NextBytes(buffer);
+            random.NextBytes(buffer);
             return BitConverter.ToInt64(buffer, 0);
         }
 
@@ -67,7 +67,7 @@ namespace RichTea.Common.Extensions
         /// <param name="min">Minimum random number.</param>
         /// <param name="max">Maximum randon number.</param>
         /// <returns>Random number in the given range.</returns>
-        public static long RandomLong(this Random rnd, long min, long max)
+        public static long RandomLong(this Random random, long min, long max)
         {
             EnsureMinLEQMax(ref min, ref max);
             long numbersInRange = unchecked(max - min + 1);
@@ -76,10 +76,10 @@ namespace RichTea.Common.Extensions
                 throw new ArgumentException("Size of range between min and max must be less than or equal to Int64.MaxValue");
             }
 
-            long randomOffset = RandomLong(rnd);
+            long randomOffset = RandomLong(random);
             if (IsModuloBiased(randomOffset, numbersInRange))
             {
-                return RandomLong(rnd, min, max);
+                return RandomLong(random, min, max);
             }
             else
             {
