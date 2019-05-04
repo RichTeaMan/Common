@@ -31,7 +31,7 @@ Gets a random double from the start value within +/- the supplied range.
 * range: The range above and below the start to generate the number.
 
 ## NextLong
-### long NextLong(this Random random, double min, double max)
+### long NextLong(this Random random, long min, long max)
 
 Gets a random long between the two specified numbers.
 
