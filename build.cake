@@ -1,5 +1,7 @@
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Coveralls"
-#tool "nuget:https://api.nuget.org/v3/index.json?package=coveralls.io"
+#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Coveralls&version=0.10.0"
+#tool "nuget:https://api.nuget.org/v3/index.json?package=coveralls.io&version=1.4.2"
+#tool "nuget:https://api.nuget.org/v3/index.json?package=OpenCover&version=4.7.922"
+#tool "nuget:https://api.nuget.org/v3/index.json?package=ReportGenerator&version=4.1.4"
 
 //////////////////////////////////////////////////////////////////////
 // ARGUMENTS

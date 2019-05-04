@@ -11,10 +11,10 @@ This project is a repository of useful classes:
 
 ## Cake Tasks
 This project uses [Cake](https://cakebuild.net)!
-* cake -target=Clean
-* cake -target=Restore-Nuget-Packages
-* cake -target=Build
-* cake -target=Test
+* ./cake.sh -target=Clean
+* ./cake.sh -target=Restore-Nuget-Packages
+* ./cake.sh -target=Build
+* ./cake.sh -target=Test
 
 ## CI
 
