@@ -1,7 +1,9 @@
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Coveralls&version=0.10.0"
-#tool "nuget:https://api.nuget.org/v3/index.json?package=coveralls.io&version=1.4.2"
-#tool "nuget:https://api.nuget.org/v3/index.json?package=OpenCover&version=4.7.922"
-#tool "nuget:https://api.nuget.org/v3/index.json?package=ReportGenerator&version=4.1.4"
+#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Coveralls"
+#addin "Cake.DocFx"
+#tool "nuget:https://api.nuget.org/v3/index.json?package=coveralls.io"
+#tool "nuget:https://api.nuget.org/v3/index.json?package=OpenCover"
+#tool "nuget:https://api.nuget.org/v3/index.json?package=ReportGenerator"
+#tool "docfx.console"
 
 //////////////////////////////////////////////////////////////////////
 // ARGUMENTS
@@ -66,6 +68,10 @@ Task("Appveyor")
     });
 
 });
+
+Task("Docs").Does(() => DocFxBuild("./Docfx/docfx.json"));
+
+Task("DocsServe").Does(() => DocFxServe("./Docfx/docs"));
 
 //////////////////////////////////////////////////////////////////////
 // TASK TARGETS

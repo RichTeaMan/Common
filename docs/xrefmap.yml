@@ -1,0 +1,285 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: RichTea.Common
+  name: RichTea.Common
+  href: api/RichTea.Common.html
+  commentId: N:RichTea.Common
+  fullName: RichTea.Common
+  nameWithType: RichTea.Common
+- uid: RichTea.Common.EqualsBuilder`1
+  name: EqualsBuilder<T>
+  href: api/RichTea.Common.EqualsBuilder-1.html
+  commentId: T:RichTea.Common.EqualsBuilder`1
+  name.vb: EqualsBuilder(Of T)
+  fullName: RichTea.Common.EqualsBuilder<T>
+  fullName.vb: RichTea.Common.EqualsBuilder(Of T)
+  nameWithType: EqualsBuilder<T>
+  nameWithType.vb: EqualsBuilder(Of T)
+- uid: RichTea.Common.EqualsBuilder`1.#ctor(`0,System.Object)
+  name: EqualsBuilder(T, Object)
+  href: api/RichTea.Common.EqualsBuilder-1.html#RichTea_Common_EqualsBuilder_1__ctor__0_System_Object_
+  commentId: M:RichTea.Common.EqualsBuilder`1.#ctor(`0,System.Object)
+  fullName: RichTea.Common.EqualsBuilder<T>.EqualsBuilder(T, System.Object)
+  fullName.vb: RichTea.Common.EqualsBuilder(Of T).EqualsBuilder(T, System.Object)
+  nameWithType: EqualsBuilder<T>.EqualsBuilder(T, Object)
+  nameWithType.vb: EqualsBuilder(Of T).EqualsBuilder(T, Object)
+- uid: RichTea.Common.EqualsBuilder`1.#ctor*
+  name: EqualsBuilder
+  href: api/RichTea.Common.EqualsBuilder-1.html#RichTea_Common_EqualsBuilder_1__ctor_
+  commentId: Overload:RichTea.Common.EqualsBuilder`1.#ctor
+  isSpec: "True"
+  fullName: RichTea.Common.EqualsBuilder<T>.EqualsBuilder
+  fullName.vb: RichTea.Common.EqualsBuilder(Of T).EqualsBuilder
+  nameWithType: EqualsBuilder<T>.EqualsBuilder
+  nameWithType.vb: EqualsBuilder(Of T).EqualsBuilder
+- uid: RichTea.Common.EqualsBuilder`1.Append(System.Object,System.Object)
+  name: Append(Object, Object)
+  href: api/RichTea.Common.EqualsBuilder-1.html#RichTea_Common_EqualsBuilder_1_Append_System_Object_System_Object_
+  commentId: M:RichTea.Common.EqualsBuilder`1.Append(System.Object,System.Object)
+  fullName: RichTea.Common.EqualsBuilder<T>.Append(System.Object, System.Object)
+  fullName.vb: RichTea.Common.EqualsBuilder(Of T).Append(System.Object, System.Object)
+  nameWithType: EqualsBuilder<T>.Append(Object, Object)
+  nameWithType.vb: EqualsBuilder(Of T).Append(Object, Object)
+- uid: RichTea.Common.EqualsBuilder`1.Append*
+  name: Append
+  href: api/RichTea.Common.EqualsBuilder-1.html#RichTea_Common_EqualsBuilder_1_Append_
+  commentId: Overload:RichTea.Common.EqualsBuilder`1.Append
+  isSpec: "True"
+  fullName: RichTea.Common.EqualsBuilder<T>.Append
+  fullName.vb: RichTea.Common.EqualsBuilder(Of T).Append
+  nameWithType: EqualsBuilder<T>.Append
+  nameWithType.vb: EqualsBuilder(Of T).Append
+- uid: RichTea.Common.EqualsBuilder`1.Append``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  name: Append<TProperty>(Expression<Func<T, TProperty>>)
+  href: api/RichTea.Common.EqualsBuilder-1.html#RichTea_Common_EqualsBuilder_1_Append__1_System_Linq_Expressions_Expression_System_Func__0___0___
+  commentId: M:RichTea.Common.EqualsBuilder`1.Append``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  name.vb: Append(Of TProperty)(Expression(Of Func(Of T, TProperty)))
+  fullName: RichTea.Common.EqualsBuilder<T>.Append<TProperty>(System.Linq.Expressions.Expression<System.Func<T, TProperty>>)
+  fullName.vb: RichTea.Common.EqualsBuilder(Of T).Append(Of TProperty)(System.Linq.Expressions.Expression(Of System.Func(Of T, TProperty)))
+  nameWithType: EqualsBuilder<T>.Append<TProperty>(Expression<Func<T, TProperty>>)
+  nameWithType.vb: EqualsBuilder(Of T).Append(Of TProperty)(Expression(Of Func(Of T, TProperty)))
+- uid: RichTea.Common.EqualsBuilder`1.AppendBase(System.Boolean)
+  name: AppendBase(Boolean)
+  href: api/RichTea.Common.EqualsBuilder-1.html#RichTea_Common_EqualsBuilder_1_AppendBase_System_Boolean_
+  commentId: M:RichTea.Common.EqualsBuilder`1.AppendBase(System.Boolean)
+  fullName: RichTea.Common.EqualsBuilder<T>.AppendBase(System.Boolean)
+  fullName.vb: RichTea.Common.EqualsBuilder(Of T).AppendBase(System.Boolean)
+  nameWithType: EqualsBuilder<T>.AppendBase(Boolean)
+  nameWithType.vb: EqualsBuilder(Of T).AppendBase(Boolean)
+- uid: RichTea.Common.EqualsBuilder`1.AppendBase*
+  name: AppendBase
+  href: api/RichTea.Common.EqualsBuilder-1.html#RichTea_Common_EqualsBuilder_1_AppendBase_
+  commentId: Overload:RichTea.Common.EqualsBuilder`1.AppendBase
+  isSpec: "True"
+  fullName: RichTea.Common.EqualsBuilder<T>.AppendBase
+  fullName.vb: RichTea.Common.EqualsBuilder(Of T).AppendBase
+  nameWithType: EqualsBuilder<T>.AppendBase
+  nameWithType.vb: EqualsBuilder(Of T).AppendBase
+- uid: RichTea.Common.EqualsBuilder`1.AreEqual
+  name: AreEqual
+  href: api/RichTea.Common.EqualsBuilder-1.html#RichTea_Common_EqualsBuilder_1_AreEqual
+  commentId: P:RichTea.Common.EqualsBuilder`1.AreEqual
+  fullName: RichTea.Common.EqualsBuilder<T>.AreEqual
+  fullName.vb: RichTea.Common.EqualsBuilder(Of T).AreEqual
+  nameWithType: EqualsBuilder<T>.AreEqual
+  nameWithType.vb: EqualsBuilder(Of T).AreEqual
+- uid: RichTea.Common.EqualsBuilder`1.AreEqual*
+  name: AreEqual
+  href: api/RichTea.Common.EqualsBuilder-1.html#RichTea_Common_EqualsBuilder_1_AreEqual_
+  commentId: Overload:RichTea.Common.EqualsBuilder`1.AreEqual
+  isSpec: "True"
+  fullName: RichTea.Common.EqualsBuilder<T>.AreEqual
+  fullName.vb: RichTea.Common.EqualsBuilder(Of T).AreEqual
+  nameWithType: EqualsBuilder<T>.AreEqual
+  nameWithType.vb: EqualsBuilder(Of T).AreEqual
+- uid: RichTea.Common.Extensions
+  name: RichTea.Common.Extensions
+  href: api/RichTea.Common.Extensions.html
+  commentId: N:RichTea.Common.Extensions
+  fullName: RichTea.Common.Extensions
+  nameWithType: RichTea.Common.Extensions
+- uid: RichTea.Common.Extensions.RandomExtension
+  name: RandomExtension
+  href: api/RichTea.Common.Extensions.RandomExtension.html
+  commentId: T:RichTea.Common.Extensions.RandomExtension
+  fullName: RichTea.Common.Extensions.RandomExtension
+  nameWithType: RandomExtension
+- uid: RichTea.Common.Extensions.RandomExtension.NextDouble(System.Random,System.Double,System.Double)
+  name: NextDouble(Random, Double, Double)
+  href: api/RichTea.Common.Extensions.RandomExtension.html#RichTea_Common_Extensions_RandomExtension_NextDouble_System_Random_System_Double_System_Double_
+  commentId: M:RichTea.Common.Extensions.RandomExtension.NextDouble(System.Random,System.Double,System.Double)
+  fullName: RichTea.Common.Extensions.RandomExtension.NextDouble(System.Random, System.Double, System.Double)
+  nameWithType: RandomExtension.NextDouble(Random, Double, Double)
+- uid: RichTea.Common.Extensions.RandomExtension.NextDouble*
+  name: NextDouble
+  href: api/RichTea.Common.Extensions.RandomExtension.html#RichTea_Common_Extensions_RandomExtension_NextDouble_
+  commentId: Overload:RichTea.Common.Extensions.RandomExtension.NextDouble
+  isSpec: "True"
+  fullName: RichTea.Common.Extensions.RandomExtension.NextDouble
+  nameWithType: RandomExtension.NextDouble
+- uid: RichTea.Common.Extensions.RandomExtension.NextDoubleInRange(System.Random,System.Double)
+  name: NextDoubleInRange(Random, Double)
+  href: api/RichTea.Common.Extensions.RandomExtension.html#RichTea_Common_Extensions_RandomExtension_NextDoubleInRange_System_Random_System_Double_
+  commentId: M:RichTea.Common.Extensions.RandomExtension.NextDoubleInRange(System.Random,System.Double)
+  fullName: RichTea.Common.Extensions.RandomExtension.NextDoubleInRange(System.Random, System.Double)
+  nameWithType: RandomExtension.NextDoubleInRange(Random, Double)
+- uid: RichTea.Common.Extensions.RandomExtension.NextDoubleInRange(System.Random,System.Double,System.Double)
+  name: NextDoubleInRange(Random, Double, Double)
+  href: api/RichTea.Common.Extensions.RandomExtension.html#RichTea_Common_Extensions_RandomExtension_NextDoubleInRange_System_Random_System_Double_System_Double_
+  commentId: M:RichTea.Common.Extensions.RandomExtension.NextDoubleInRange(System.Random,System.Double,System.Double)
+  fullName: RichTea.Common.Extensions.RandomExtension.NextDoubleInRange(System.Random, System.Double, System.Double)
+  nameWithType: RandomExtension.NextDoubleInRange(Random, Double, Double)
+- uid: RichTea.Common.Extensions.RandomExtension.NextDoubleInRange*
+  name: NextDoubleInRange
+  href: api/RichTea.Common.Extensions.RandomExtension.html#RichTea_Common_Extensions_RandomExtension_NextDoubleInRange_
+  commentId: Overload:RichTea.Common.Extensions.RandomExtension.NextDoubleInRange
+  isSpec: "True"
+  fullName: RichTea.Common.Extensions.RandomExtension.NextDoubleInRange
+  nameWithType: RandomExtension.NextDoubleInRange
+- uid: RichTea.Common.Extensions.RandomExtension.NextLong(System.Random)
+  name: NextLong(Random)
+  href: api/RichTea.Common.Extensions.RandomExtension.html#RichTea_Common_Extensions_RandomExtension_NextLong_System_Random_
+  commentId: M:RichTea.Common.Extensions.RandomExtension.NextLong(System.Random)
+  fullName: RichTea.Common.Extensions.RandomExtension.NextLong(System.Random)
+  nameWithType: RandomExtension.NextLong(Random)
+- uid: RichTea.Common.Extensions.RandomExtension.NextLong(System.Random,System.Int64,System.Int64)
+  name: NextLong(Random, Int64, Int64)
+  href: api/RichTea.Common.Extensions.RandomExtension.html#RichTea_Common_Extensions_RandomExtension_NextLong_System_Random_System_Int64_System_Int64_
+  commentId: M:RichTea.Common.Extensions.RandomExtension.NextLong(System.Random,System.Int64,System.Int64)
+  fullName: RichTea.Common.Extensions.RandomExtension.NextLong(System.Random, System.Int64, System.Int64)
+  nameWithType: RandomExtension.NextLong(Random, Int64, Int64)
+- uid: RichTea.Common.Extensions.RandomExtension.NextLong*
+  name: NextLong
+  href: api/RichTea.Common.Extensions.RandomExtension.html#RichTea_Common_Extensions_RandomExtension_NextLong_
+  commentId: Overload:RichTea.Common.Extensions.RandomExtension.NextLong
+  isSpec: "True"
+  fullName: RichTea.Common.Extensions.RandomExtension.NextLong
+  nameWithType: RandomExtension.NextLong
+- uid: RichTea.Common.HashCodeBuilder
+  name: HashCodeBuilder
+  href: api/RichTea.Common.HashCodeBuilder.html
+  commentId: T:RichTea.Common.HashCodeBuilder
+  fullName: RichTea.Common.HashCodeBuilder
+  nameWithType: HashCodeBuilder
+- uid: RichTea.Common.HashCodeBuilder.Append(System.Object)
+  name: Append(Object)
+  href: api/RichTea.Common.HashCodeBuilder.html#RichTea_Common_HashCodeBuilder_Append_System_Object_
+  commentId: M:RichTea.Common.HashCodeBuilder.Append(System.Object)
+  fullName: RichTea.Common.HashCodeBuilder.Append(System.Object)
+  nameWithType: HashCodeBuilder.Append(Object)
+- uid: RichTea.Common.HashCodeBuilder.Append*
+  name: Append
+  href: api/RichTea.Common.HashCodeBuilder.html#RichTea_Common_HashCodeBuilder_Append_
+  commentId: Overload:RichTea.Common.HashCodeBuilder.Append
+  isSpec: "True"
+  fullName: RichTea.Common.HashCodeBuilder.Append
+  nameWithType: HashCodeBuilder.Append
+- uid: RichTea.Common.HashCodeBuilder.HashCode
+  name: HashCode
+  href: api/RichTea.Common.HashCodeBuilder.html#RichTea_Common_HashCodeBuilder_HashCode
+  commentId: P:RichTea.Common.HashCodeBuilder.HashCode
+  fullName: RichTea.Common.HashCodeBuilder.HashCode
+  nameWithType: HashCodeBuilder.HashCode
+- uid: RichTea.Common.HashCodeBuilder.HashCode*
+  name: HashCode
+  href: api/RichTea.Common.HashCodeBuilder.html#RichTea_Common_HashCodeBuilder_HashCode_
+  commentId: Overload:RichTea.Common.HashCodeBuilder.HashCode
+  isSpec: "True"
+  fullName: RichTea.Common.HashCodeBuilder.HashCode
+  nameWithType: HashCodeBuilder.HashCode
+- uid: RichTea.Common.HashCodeBuilder`1
+  name: HashCodeBuilder<T>
+  href: api/RichTea.Common.HashCodeBuilder-1.html
+  commentId: T:RichTea.Common.HashCodeBuilder`1
+  name.vb: HashCodeBuilder(Of T)
+  fullName: RichTea.Common.HashCodeBuilder<T>
+  fullName.vb: RichTea.Common.HashCodeBuilder(Of T)
+  nameWithType: HashCodeBuilder<T>
+  nameWithType.vb: HashCodeBuilder(Of T)
+- uid: RichTea.Common.HashCodeBuilder`1.#ctor(`0)
+  name: HashCodeBuilder(T)
+  href: api/RichTea.Common.HashCodeBuilder-1.html#RichTea_Common_HashCodeBuilder_1__ctor__0_
+  commentId: M:RichTea.Common.HashCodeBuilder`1.#ctor(`0)
+  fullName: RichTea.Common.HashCodeBuilder<T>.HashCodeBuilder(T)
+  fullName.vb: RichTea.Common.HashCodeBuilder(Of T).HashCodeBuilder(T)
+  nameWithType: HashCodeBuilder<T>.HashCodeBuilder(T)
+  nameWithType.vb: HashCodeBuilder(Of T).HashCodeBuilder(T)
+- uid: RichTea.Common.HashCodeBuilder`1.#ctor*
+  name: HashCodeBuilder
+  href: api/RichTea.Common.HashCodeBuilder-1.html#RichTea_Common_HashCodeBuilder_1__ctor_
+  commentId: Overload:RichTea.Common.HashCodeBuilder`1.#ctor
+  isSpec: "True"
+  fullName: RichTea.Common.HashCodeBuilder<T>.HashCodeBuilder
+  fullName.vb: RichTea.Common.HashCodeBuilder(Of T).HashCodeBuilder
+  nameWithType: HashCodeBuilder<T>.HashCodeBuilder
+  nameWithType.vb: HashCodeBuilder(Of T).HashCodeBuilder
+- uid: RichTea.Common.ToStringBuilder`1
+  name: ToStringBuilder<T>
+  href: api/RichTea.Common.ToStringBuilder-1.html
+  commentId: T:RichTea.Common.ToStringBuilder`1
+  name.vb: ToStringBuilder(Of T)
+  fullName: RichTea.Common.ToStringBuilder<T>
+  fullName.vb: RichTea.Common.ToStringBuilder(Of T)
+  nameWithType: ToStringBuilder<T>
+  nameWithType.vb: ToStringBuilder(Of T)
+- uid: RichTea.Common.ToStringBuilder`1.#ctor(`0)
+  name: ToStringBuilder(T)
+  href: api/RichTea.Common.ToStringBuilder-1.html#RichTea_Common_ToStringBuilder_1__ctor__0_
+  commentId: M:RichTea.Common.ToStringBuilder`1.#ctor(`0)
+  fullName: RichTea.Common.ToStringBuilder<T>.ToStringBuilder(T)
+  fullName.vb: RichTea.Common.ToStringBuilder(Of T).ToStringBuilder(T)
+  nameWithType: ToStringBuilder<T>.ToStringBuilder(T)
+  nameWithType.vb: ToStringBuilder(Of T).ToStringBuilder(T)
+- uid: RichTea.Common.ToStringBuilder`1.#ctor*
+  name: ToStringBuilder
+  href: api/RichTea.Common.ToStringBuilder-1.html#RichTea_Common_ToStringBuilder_1__ctor_
+  commentId: Overload:RichTea.Common.ToStringBuilder`1.#ctor
+  isSpec: "True"
+  fullName: RichTea.Common.ToStringBuilder<T>.ToStringBuilder
+  fullName.vb: RichTea.Common.ToStringBuilder(Of T).ToStringBuilder
+  nameWithType: ToStringBuilder<T>.ToStringBuilder
+  nameWithType.vb: ToStringBuilder(Of T).ToStringBuilder
+- uid: RichTea.Common.ToStringBuilder`1.Append(System.Object,System.String)
+  name: Append(Object, String)
+  href: api/RichTea.Common.ToStringBuilder-1.html#RichTea_Common_ToStringBuilder_1_Append_System_Object_System_String_
+  commentId: M:RichTea.Common.ToStringBuilder`1.Append(System.Object,System.String)
+  fullName: RichTea.Common.ToStringBuilder<T>.Append(System.Object, System.String)
+  fullName.vb: RichTea.Common.ToStringBuilder(Of T).Append(System.Object, System.String)
+  nameWithType: ToStringBuilder<T>.Append(Object, String)
+  nameWithType.vb: ToStringBuilder(Of T).Append(Object, String)
+- uid: RichTea.Common.ToStringBuilder`1.Append*
+  name: Append
+  href: api/RichTea.Common.ToStringBuilder-1.html#RichTea_Common_ToStringBuilder_1_Append_
+  commentId: Overload:RichTea.Common.ToStringBuilder`1.Append
+  isSpec: "True"
+  fullName: RichTea.Common.ToStringBuilder<T>.Append
+  fullName.vb: RichTea.Common.ToStringBuilder(Of T).Append
+  nameWithType: ToStringBuilder<T>.Append
+  nameWithType.vb: ToStringBuilder(Of T).Append
+- uid: RichTea.Common.ToStringBuilder`1.Append``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  name: Append<TProperty>(Expression<Func<T, TProperty>>)
+  href: api/RichTea.Common.ToStringBuilder-1.html#RichTea_Common_ToStringBuilder_1_Append__1_System_Linq_Expressions_Expression_System_Func__0___0___
+  commentId: M:RichTea.Common.ToStringBuilder`1.Append``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})
+  name.vb: Append(Of TProperty)(Expression(Of Func(Of T, TProperty)))
+  fullName: RichTea.Common.ToStringBuilder<T>.Append<TProperty>(System.Linq.Expressions.Expression<System.Func<T, TProperty>>)
+  fullName.vb: RichTea.Common.ToStringBuilder(Of T).Append(Of TProperty)(System.Linq.Expressions.Expression(Of System.Func(Of T, TProperty)))
+  nameWithType: ToStringBuilder<T>.Append<TProperty>(Expression<Func<T, TProperty>>)
+  nameWithType.vb: ToStringBuilder(Of T).Append(Of TProperty)(Expression(Of Func(Of T, TProperty)))
+- uid: RichTea.Common.ToStringBuilder`1.ToString
+  name: ToString()
+  href: api/RichTea.Common.ToStringBuilder-1.html#RichTea_Common_ToStringBuilder_1_ToString
+  commentId: M:RichTea.Common.ToStringBuilder`1.ToString
+  fullName: RichTea.Common.ToStringBuilder<T>.ToString()
+  fullName.vb: RichTea.Common.ToStringBuilder(Of T).ToString()
+  nameWithType: ToStringBuilder<T>.ToString()
+  nameWithType.vb: ToStringBuilder(Of T).ToString()
+- uid: RichTea.Common.ToStringBuilder`1.ToString*
+  name: ToString
+  href: api/RichTea.Common.ToStringBuilder-1.html#RichTea_Common_ToStringBuilder_1_ToString_
+  commentId: Overload:RichTea.Common.ToStringBuilder`1.ToString
+  isSpec: "True"
+  fullName: RichTea.Common.ToStringBuilder<T>.ToString
+  fullName.vb: RichTea.Common.ToStringBuilder(Of T).ToString
+  nameWithType: ToStringBuilder<T>.ToString
+  nameWithType.vb: ToStringBuilder(Of T).ToString
