@@ -77,6 +77,11 @@ namespace RichTea.Common
         /// <returns>To string builder.</returns>
         public ToStringBuilder<T> Append<TProperty>(Expression<Func<T, TProperty>> propertyOrField)
         {
+            if (propertyOrField == null)
+            {
+                throw new ArgumentNullException(nameof(propertyOrField));
+            }
+
             var expression = propertyOrField.Body as MemberExpression;
             if (expression == null)
             {
