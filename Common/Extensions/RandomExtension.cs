@@ -87,16 +87,15 @@ namespace RichTea.Common.Extensions
             }
         }
 
-        static bool IsModuloBiased(long randomOffset, long numbersInRange)
+        private static bool IsModuloBiased(long randomOffset, long numbersInRange)
         {
             long greatestCompleteRange = numbersInRange * (long.MaxValue / numbersInRange);
             return randomOffset > greatestCompleteRange;
         }
 
-        static long PositiveModuloOrZero(long dividend, long divisor)
+        private static long PositiveModuloOrZero(long dividend, long divisor)
         {
-            long mod;
-            Math.DivRem(dividend, divisor, out mod);
+            Math.DivRem(dividend, divisor, out long mod);
             if (mod < 0)
             {
                 mod += divisor;
@@ -104,7 +103,7 @@ namespace RichTea.Common.Extensions
             return mod;
         }
 
-        static void EnsureMinLEQMax(ref long min, ref long max)
+        private static void EnsureMinLEQMax(ref long min, ref long max)
         {
             if (min <= max)
             {

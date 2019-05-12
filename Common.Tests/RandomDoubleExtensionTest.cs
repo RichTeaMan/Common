@@ -7,7 +7,7 @@ using System.Linq;
 namespace RichTea.Common.Tests
 {
     [TestClass]
-    public class RandomExtensionTest
+    public class RandomDoubleExtensionTest
     {
         [TestMethod]
         public void NextDoubleTest()
