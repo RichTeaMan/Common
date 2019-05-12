@@ -1,13 +1,8 @@
 # RichTea.Common
 [![NuGet](https://img.shields.io/nuget/v/RichTea.Common.svg?style=flat)](https://www.nuget.org/packages/RichTea.Common/)
 
-This project is a repository of useful classes:
-
-## Classes
-* [EqualsBuilder](Common/Docs/EqualsBuilder.md)
-* [HashBuilder](Common/Docs/HashBuilder.md)
-* [ToStringBuilder](Common/Docs/ToStringBuilder.md)
-* [RandomExtension](Common/Docs/RandomExtension.md)
+This project is a repository of useful classes that provide object
+and Random extensions. Full documentation canr be found at https://richteaman.github.io/Common.
 
 ## Cake Tasks
 This project uses [Cake](https://cakebuild.net)!
