@@ -1,6 +1,7 @@
 using RichTea.Common.Tests.Objects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System;
 
 namespace RichTea.Common.Tests
 {
@@ -29,6 +30,106 @@ namespace RichTea.Common.Tests
 
             // assert
             Assert.IsFalse(equal);
+        }
+
+        /// <summary>
+        /// Tests if left hand equals can handle nulls.
+        /// </summary>
+        [TestMethod]
+        public void LeftNullEqualsTest()
+        {
+            // setup
+            string firstName = "Timmy";
+            string lastName = "Biggles";
+
+            var personA = new Person
+            {
+                FirstName = null,
+                LastName = null
+            };
+
+            var personB = new Person
+            {
+                FirstName = firstName,
+                LastName = lastName
+            };
+
+            // test
+            var equal = personA.Equals(null);
+
+            // assert
+            Assert.IsFalse(equal);
+        }
+
+        /// <summary>
+        /// Tests if right hand equals can handle nulls.
+        /// </summary>
+        [TestMethod]
+        public void RightNullEqualsTest()
+        {
+            // setup
+            string firstName = "Timmy";
+            string lastName = "Biggles";
+
+            var personA = new Person
+            {
+                FirstName = firstName,
+                LastName = lastName
+            };
+
+            var personB = new Person
+            {
+                FirstName = null,
+                LastName = null
+            };
+
+            // test
+            var equal = personA.Equals(personB);
+
+            // assert
+            Assert.IsFalse(equal);
+        }
+
+        /// <summary>
+        /// Tests equals append with a non property.
+        /// </summary>
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ToStringAppendNonProperty()
+        {
+            // setup
+            var dictionaryContainerA = new MethodDictionaryContainer();
+            var dictionaryContainerB = new MethodDictionaryContainer();
+            var equalsBuilder = new EqualsBuilder<MethodDictionaryContainer>(dictionaryContainerA, dictionaryContainerB);
+
+            // test
+            equalsBuilder.Append<string>(x => x.TestMethod());
+        }
+
+        /// <summary>
+        /// Tests if right hand equals can handle nulls.
+        /// </summary>
+        [TestMethod]
+        public void LeftRightNullEqualsTest()
+        {
+            // setup
+            var personA = new Person
+            {
+                FirstName = null,
+                LastName = null
+            };
+
+            var personB = new Person
+            {
+                FirstName = null,
+                LastName = null
+            };
+
+            // test
+            var equal = personA.Equals(personB);
+
+            // assert
+            Assert.IsTrue(equal);
         }
 
         /// <summary>
