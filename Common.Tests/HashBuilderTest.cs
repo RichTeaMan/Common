@@ -9,6 +9,17 @@ namespace RichTea.Common.Tests
     [TestClass]
     public class HashBuilderTest
     {
+        /// <summary>
+        /// Tests generic hash builder constructor.
+        [TestMethod]
+        public void GenericHashBuilderConstructorTest()
+        {
+            // test
+#pragma warning disable CS0612 // Type or member is obsolete
+            new HashCodeBuilder<Person>(new Person());
+#pragma warning restore CS0612 // Type or member is obsolete
+        }
+
 
         /// <summary>
         /// Tests if the object is equal.
