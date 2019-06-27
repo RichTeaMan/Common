@@ -69,9 +69,15 @@ Task("Appveyor")
 
 });
 
-Task("Docs").Does(() => DocFxBuild("./Docfx/docfx.json"));
+Task("Docs").Does(() =>
+{
+    DocFxMetadata("./Docfx/docfx.json");
+    DocFxBuild("./Docfx/docfx.json");
+});
 
-Task("DocsServe").Does(() => DocFxServe("./Docfx/docs"));
+Task("DocsServe")
+    .IsDependentOn("Docs")
+    .Does(() => DocFxServe("./docs"));
 
 //////////////////////////////////////////////////////////////////////
 // TASK TARGETS

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace RichTea.Common.Extensions
 {
+    /// <summary>
+    /// Extensions for <see cref="IEnumerable{T}"/>.
+    /// </summary>
     public static class EnumerableExtension
     {
         /// <summary>
@@ -17,7 +19,7 @@ namespace RichTea.Common.Extensions
         {
             var random = new Random();
             var randomCollection = collection.RandomiseOrder(random);
-            foreach(var randomElement in randomCollection)
+            foreach (var randomElement in randomCollection)
             {
                 yield return randomElement;
             }

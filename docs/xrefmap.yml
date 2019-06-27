@@ -99,6 +99,37 @@ references:
   commentId: N:RichTea.Common.Extensions
   fullName: RichTea.Common.Extensions
   nameWithType: RichTea.Common.Extensions
+- uid: RichTea.Common.Extensions.EnumerableExtension
+  name: EnumerableExtension
+  href: api/RichTea.Common.Extensions.EnumerableExtension.html
+  commentId: T:RichTea.Common.Extensions.EnumerableExtension
+  fullName: RichTea.Common.Extensions.EnumerableExtension
+  nameWithType: EnumerableExtension
+- uid: RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder*
+  name: RandomiseOrder
+  href: api/RichTea.Common.Extensions.EnumerableExtension.html#RichTea_Common_Extensions_EnumerableExtension_RandomiseOrder_
+  commentId: Overload:RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder
+  isSpec: "True"
+  fullName: RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder
+  nameWithType: EnumerableExtension.RandomiseOrder
+- uid: RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder``1(System.Collections.Generic.IEnumerable{``0})
+  name: RandomiseOrder<T>(IEnumerable<T>)
+  href: api/RichTea.Common.Extensions.EnumerableExtension.html#RichTea_Common_Extensions_EnumerableExtension_RandomiseOrder__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: RandomiseOrder(Of T)(IEnumerable(Of T))
+  fullName: RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableExtension.RandomiseOrder<T>(IEnumerable<T>)
+  nameWithType.vb: EnumerableExtension.RandomiseOrder(Of T)(IEnumerable(Of T))
+- uid: RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder``1(System.Collections.Generic.IEnumerable{``0},System.Random)
+  name: RandomiseOrder<T>(IEnumerable<T>, Random)
+  href: api/RichTea.Common.Extensions.EnumerableExtension.html#RichTea_Common_Extensions_EnumerableExtension_RandomiseOrder__1_System_Collections_Generic_IEnumerable___0__System_Random_
+  commentId: M:RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder``1(System.Collections.Generic.IEnumerable{``0},System.Random)
+  name.vb: RandomiseOrder(Of T)(IEnumerable(Of T), Random)
+  fullName: RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder<T>(System.Collections.Generic.IEnumerable<T>, System.Random)
+  fullName.vb: RichTea.Common.Extensions.EnumerableExtension.RandomiseOrder(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Random)
+  nameWithType: EnumerableExtension.RandomiseOrder<T>(IEnumerable<T>, Random)
+  nameWithType.vb: EnumerableExtension.RandomiseOrder(Of T)(IEnumerable(Of T), Random)
 - uid: RichTea.Common.Extensions.RandomExtension
   name: RandomExtension
   href: api/RichTea.Common.Extensions.RandomExtension.html
